@@ -24,7 +24,7 @@ class HomePage extends GetView<NotificationController> {
 
     return GetBuilder<ThemeController>(
       builder: (themeController) {
-        return GetBuilder<AddTaskController>(
+        return GetBuilder<TaskController>(
           builder: (taskcontroller) {
             return Scaffold(
               appBar: buildAppBar(),

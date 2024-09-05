@@ -19,7 +19,7 @@ class AddtaskPage extends GetView<LocationController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ThemeController>(builder: (themeController) {
-      return GetBuilder<AddTaskController>(builder: (addtotaskcontroller) {
+      return GetBuilder<TaskController>(builder: (addtotaskcontroller) {
         return Scaffold(
             appBar: AppBar(
               //s    backgroundColor: Colors.white,

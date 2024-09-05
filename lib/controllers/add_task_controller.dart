@@ -9,13 +9,14 @@ import 'package:todo_app/repo/add_task_repo.dart';
 import 'package:todo_app/controllers/location_controller.dart';
 import 'package:todo_app/widgets/bottom_sheet.dart';
 
-
-class AddTaskController extends GetxController {
+class TaskController extends GetxController {
   AddtaskRepo addtaskRepo;
   LocationController locationController;
   ThemeController themeController;
-  AddTaskController(
-      {required this.addtaskRepo, required this.locationController, required this.themeController});
+  TaskController(
+      {required this.addtaskRepo,
+      required this.locationController,
+      required this.themeController});
 
   DateTime selectedDate = DateTime.now();
   String startTime = DateFormat('hh:mm a').format(DateTime.now()).toString();
@@ -31,7 +32,6 @@ class AddTaskController extends GetxController {
   String initRepeat = 'none';
   int selectedColorIndex = 0;
 
-
   showdatePicker(context) async {
     DateTime? pickedDate = await showDatePicker(
         context: context,
@@ -44,8 +44,8 @@ class AddTaskController extends GetxController {
     }
   }
 
-  updateHomeSelectedDate(DateTime date){
-    homeSelectedDate=date;
+  updateHomeSelectedDate(DateTime date) {
+    homeSelectedDate = date;
     update();
   }
 
@@ -62,7 +62,6 @@ class AddTaskController extends GetxController {
       }
     }
   }
-
 
   changeColorIndex(int value) {
     selectedColorIndex = value;
@@ -90,7 +89,7 @@ class AddTaskController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-     String date = DateFormat('M/d/y').format(homeSelectedDate);
+    String date = DateFormat('M/d/y').format(homeSelectedDate);
     getDbData(date);
   }
 
@@ -119,7 +118,7 @@ class AddTaskController extends GetxController {
 
   patchTask(TaskModel task) async {
     await DbHelper().patchTask(task);
-     String date = DateFormat('M/d/y').format(homeSelectedDate);
+    String date = DateFormat('M/d/y').format(homeSelectedDate);
     getDbData(date);
   }
 }

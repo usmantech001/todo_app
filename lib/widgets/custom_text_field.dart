@@ -20,7 +20,7 @@ Widget buildTextField(
     Function(String)? onChanged}) {
   return GetBuilder<ThemeController>(
     builder: (themeController) {
-      return GetBuilder<AddTaskController>(builder: (taskController) {
+      return GetBuilder<TaskController>(builder: (taskController) {
         return Container(
           margin: EdgeInsets.only(bottom: 10.h),
           child: Column(

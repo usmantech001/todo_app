@@ -5,7 +5,7 @@ import 'package:todo_app/controllers/add_task_controller.dart';
 import 'package:todo_app/widgets/custom_text.dart';
 
 
-Widget taskListBuilder(BuildContext context, AddTaskController taskcontroller) {
+Widget taskListBuilder(BuildContext context, TaskController taskcontroller) {
   return Expanded(
       child: ListView.builder(
           physics: const BouncingScrollPhysics(),

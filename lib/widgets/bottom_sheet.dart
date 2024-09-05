@@ -11,7 +11,7 @@ import 'package:todo_app/widgets/shhet_button.dart';
 
 
 Widget bottomSheetContainer(TaskModel task) {
-  return GetBuilder<AddTaskController>(builder: (taskController) {
+  return GetBuilder<TaskController>(builder: (taskController) {
     return Container(
       padding:
           EdgeInsets.only(left: 20.w, right: 20.w, top: 60.h, bottom: 10.h),

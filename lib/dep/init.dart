@@ -14,6 +14,6 @@ Future<void> init() async {
   Get.lazyPut(()=> NotificationController(), fenix: true);
   Get.lazyPut(()=> LocationController(), fenix: true);
   Get.lazyPut(() => ThemeController(), fenix: true);
-  Get.lazyPut(() => AddTaskController(addtaskRepo: Get.find(), locationController: Get.find(), themeController: Get.find()), fenix: true);
+  Get.lazyPut(() => TaskController(addtaskRepo: Get.find(), locationController: Get.find(), themeController: Get.find()), fenix: true);
   Get.lazyPut(() => AddtaskRepo(sharedPreferences: Get.find()));
 }
