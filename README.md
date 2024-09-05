@@ -1,16 +1,10 @@
-# todo_app
+# Location-Based To-Do App
 
-A new Flutter project.
+A Flutter app that allows users to create to-do items and associate them with specific locations. The app sends notifications when the user is near the location of a to-do item. Notifications will appear every 5 seconds when the user is near the location, whether the app is in the foreground or background.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Features
+    - Create, update, and delete to-do items.
+    - Assign a specific location to each to-do item.
+    - Notify the user when they are near the location of a to-do item.
+    - Works in both foreground and background modes.
+    - Notifications are triggered every 5 seconds when near the to-do location.

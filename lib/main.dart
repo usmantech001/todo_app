@@ -23,7 +23,6 @@ Future<void> main() async {
   await NotificationController().initializeSrvice();
  
   runApp(const MyApp());
-  // await AndroidAlarmManager.periodic(const Duration(seconds: 5), 0, showNotification, wakeup: true, exact: true);
 }
 
 class MyApp extends StatelessWidget {
