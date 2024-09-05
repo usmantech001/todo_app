@@ -26,7 +26,7 @@ Future<void> checkLocationService() async{
   isEnabled = await Geolocator.isLocationServiceEnabled();
   
  if(!isEnabled){
- final isOpened = await Geolocator.openLocationSettings();
+ await Geolocator.openLocationSettings();
 
  }
  final locationPermission = await Geolocator.checkPermission();

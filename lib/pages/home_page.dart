@@ -9,38 +9,19 @@ import 'package:todo_app/controllers/notification_controller.dart';
 import 'package:todo_app/controllers/theme_controller.dart';
 import 'package:todo_app/pages/add_task_page.dart';
 import 'package:todo_app/pages/constants/color.dart';
-import 'package:todo_app/widgets/widgets.dart';
+import 'package:todo_app/utils/date_style.dart';
+import 'package:todo_app/widgets/custom_ap_bar.dart';
+import 'package:todo_app/widgets/custom_button.dart';
+import 'package:todo_app/widgets/custom_text.dart';
+import 'package:todo_app/widgets/task_list.dart';
+
 
 class HomePage extends GetView<NotificationController> {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final locationController = Get.find<LocationController>();
-    //  if(!locationController.isEnabled){
-    //    showDialog(context: context, builder: (context){
-    //   return Container(
-    //     padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
-    //     decoration: BoxDecoration(
-    //       color: Colors.white,
-    //       borderRadius: BorderRadius.circular(10.sp),
-    //     ),
-    //      child: Column(
-    //       mainAxisSize: MainAxisSize.min,
-    //       children: [
-    //           reusableText('To receive notification based on your location set, turn on device location',size: 14.sp),
-    //           SizedBox(height: 30.h,),
-    //           Row(
-    //             children: [
-    //               TextButton(onPressed: ()=>Get.back(), child: reusableText('No, thanks', size: 14.sp)),
-    //               TextButton(onPressed: ()=>locationController.openLocationSettings(), child: reusableText('Turn on', size: 14.sp))
-    //             ],
-    //           )
-    //       ],
-    //      ),
-    //   );
-    //  });
-    //  }
+
     return GetBuilder<ThemeController>(
       builder: (themeController) {
         return GetBuilder<AddTaskController>(

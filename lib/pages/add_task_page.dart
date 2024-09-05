@@ -8,7 +8,10 @@ import 'package:todo_app/controllers/location_controller.dart';
 import 'package:todo_app/controllers/theme_controller.dart';
 import 'package:todo_app/model/task_model.dart';
 import 'package:todo_app/pages/constants/color.dart';
-import 'package:todo_app/widgets/widgets.dart';
+import 'package:todo_app/widgets/custom_button.dart';
+import 'package:todo_app/widgets/custom_text.dart';
+import 'package:todo_app/widgets/custom_text_field.dart';
+
 
 class AddtaskPage extends GetView<LocationController> {
   const AddtaskPage({super.key});

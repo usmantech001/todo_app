@@ -7,7 +7,8 @@ import 'package:todo_app/model/task_model.dart';
 import 'package:todo_app/pages/constants/color.dart';
 import 'package:todo_app/repo/add_task_repo.dart';
 import 'package:todo_app/controllers/location_controller.dart';
-import 'package:todo_app/widgets/widgets.dart';
+import 'package:todo_app/widgets/bottom_sheet.dart';
+
 
 class AddTaskController extends GetxController {
   AddtaskRepo addtaskRepo;
@@ -29,15 +30,8 @@ class AddTaskController extends GetxController {
   int initRemind = 5;
   String initRepeat = 'none';
   int selectedColorIndex = 0;
-  List<int> remindTime = [
-    5,
-    10,
-    15,
-    20,
-    25,
-    30,
-  ];
-  List<String> repeatTaskTime = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
+
+
   showdatePicker(context) async {
     DateTime? pickedDate = await showDatePicker(
         context: context,
@@ -69,15 +63,6 @@ class AddTaskController extends GetxController {
     }
   }
 
-  setRemindMinutes(int value) {
-    initRemind = value;
-    update();
-  }
-
-  setRepeatTime(String value) {
-    initRepeat = value;
-    update();
-  }
 
   changeColorIndex(int value) {
     selectedColorIndex = value;
